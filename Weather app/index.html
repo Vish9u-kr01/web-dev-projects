@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #2E2B5F, #4B72D9);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .weather-container {
+            background: linear-gradient(145deg, #7557db, #0e35c5);
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+            border-radius: 20px;
+            padding: 20px;
+            text-align: center;
+            color: #FFFFFF;
+            width: 300px;
+
+        }
+
+        .weather-container h1 {
+            color:aqua;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .weather-container input {
+            background-color:whitesmoke;
+            padding: 10px;
+            font-size: 16px;
+            width: 80%;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .weather-container button {
+          background-color: rgba(240, 240, 9, 0.836);
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            box-shadow: 0px 1px 3px rgba(255, 200, 87, 0.6);
+            font-size: 18px;
+            margin-top: 20px;
+        }
+
+        .weather-container button:hover {
+            background: linear-gradient(90deg, #fff700, #ffe600,#fff700);
+            box-shadow: 0px 6px 15px #fff700;
+        }
+
+        .shine {
+    position: relative;
+    overflow: hidden;
+}
+
+        .shine:after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: rgba(142, 167, 226, 0.148);
+            transform: rotate(45deg);
+            transition: 1s ease-in-out;
+            animation: shine-animation 3s infinite linear;
+        }
+
+        @keyframes shine-animation {
+            0% {
+                transform: translateX(-200%) rotate(45deg);
+            }
+
+            100% {
+                transform: translateX(200%) rotate(45deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+   
+    <div class="weather-container shine">
+        <h1>Weather App</h1>
+        <input type="text" id="cityInput" placeholder="Enter city name">
+        <button onclick="getWeather()">Get Weather</button>
+        <div id="weatherResult" class="weather-result"></div>
+    </div>
+
+
+    <script>
+        async function getWeather() {
+            const city = document.getElementById('cityInput').value;
+            const apiKey = '14a6948cde5b48ad950125328252601'; // Replace with your WeatherAPI.com key
+            const apiUrl = `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}`;
+
+            try {
+                const response = await fetch(apiUrl);
+                if (!response.ok) {
+                    throw new Error('City not found or API error');
+                }
+                const data = await response.json();
+                const currentTime = new Date().toLocaleString();
+
+                const weatherResult = document.getElementById('weatherResult');
+                weatherResult.innerHTML = `
+                    <p>City: <strong>${data.location.name}</strong></p>
+                    <p>Region: <strong>${data.location.region}</strong></p>
+                    <p>Country: <strong>${data.location.country}</strong></p>
+                    <p>Temperature: <strong>${data.current.temp_c} &#8451;</strong></p>
+                    <p>Condition: <strong>${data.current.condition.text}</strong></p>
+                    <p>Current Time: <strong>${currentTime}</strong></p>
+                `;
+            } catch (error) {
+                document.getElementById('weatherResult').innerHTML = `<p style="color: red;">Error: ${error.message}</p>`;
+            }
+        }
+    </script>
+
+</body>
+
+</html>

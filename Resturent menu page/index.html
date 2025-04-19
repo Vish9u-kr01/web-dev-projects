@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurant Menu</title>
+ <style>
+            * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+    
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
+  background-image: url('menupage.jpg');
+ background-position: center;
+}
+
+header {
+  background-color: #b22222;
+  color: white;
+  padding: 20px 0;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+header .logo {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+  background-color: #ff0000;
+}
+
+main {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h2.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #000000;
+}
+
+.menu-category {
+  margin-bottom: 40px;
+}
+
+.category-title {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #000000;
+  border-bottom: 2px solid #ff6f61;
+  padding-bottom: 5px;
+}
+
+.menu-items {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.menu-item {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.menu-item h4 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #ff6f61;
+}
+
+.menu-item p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.price {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+footer {
+  background-color: #b22222;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
+
+footer p {
+  font-size: 1rem;
+}
+
+ </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1 class="logo">Delicious Bites</h1>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Menu</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="menu">
+      <h2 class="section-title">Our Menu</h2>
+      
+      <div class="menu-category">
+        <h3 class="category-title">Appetizers</h3>
+        <div class="menu-items">
+          <div class="menu-item">
+            <h4>Bruschetta</h4>
+            <p>Grilled bread topped with fresh tomatoes, garlic, and basil.</p>
+            <span class="price">$7.99</span>
+          </div>
+          <div class="menu-item">
+            <h4>Stuffed Mushrooms</h4>
+            <p>Delicious mushrooms filled with creamy cheese and herbs.</p>
+            <span class="price">$9.99</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-category">
+        <h3 class="category-title">Main Courses</h3>
+        <div class="menu-items">
+          <div class="menu-item">
+            <h4>Grilled Salmon</h4>
+            <p>Freshly grilled salmon served with a lemon butter sauce.</p>
+            <span class="price">$18.99</span>
+          </div>
+          <div class="menu-item">
+            <h4>Chicken Alfredo</h4>
+            <p>Creamy Alfredo pasta with grilled chicken and parmesan.</p>
+            <span class="price">$14.99</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-category">
+        <h3 class="category-title">Desserts</h3>
+        <div class="menu-items">
+          <div class="menu-item">
+            <h4>Chocolate Lava Cake</h4>
+            <p>Molten chocolate cake with a gooey center.</p>
+            <span class="price">$6.99</span>
+          </div>
+          <div class="menu-item">
+            <h4>Cheesecake</h4>
+            <p>Rich and creamy cheesecake with a graham cracker crust.</p>
+            <span class="price">$5.99</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 Delicious Bites. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

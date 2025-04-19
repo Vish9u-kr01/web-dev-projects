@@ -1,0 +1,257 @@
+/* Fonts */ 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #000;
+  color: #fff;
+  line-height: 1.6;
+}
+
+/* NAVBAR */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
+  border-bottom: 1px solid #222;
+  flex-wrap: wrap;
+}
+
+nav h1 {
+  font-size: 28px;
+  background: linear-gradient(to right, #5b8dfd, #d16ba5);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.text-gradient {
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+nav ul {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #e0e0e0;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #5b8dfd;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icons a {
+  color: #fff;
+  font-size: 1.2rem;
+  transition: transform 0.3s ease,color 0.3s ease;
+}
+
+.social-icons a:hover {
+  transform: scale(1.2);
+  color: #5b8dfd;
+}
+
+/* SECTIONS */
+section {
+  padding: 80px 20px;
+  background: linear-gradient(to bottom, #000, #130f40, #2e1a5f);
+  text-align: center;
+}
+
+section:nth-child(even) {
+  background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
+}
+
+section h2 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  background: linear-gradient(to right, #5b8dfd, #d16ba5);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+section p {
+  font-size: 1.1rem;
+  color: #ccc;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* HERO SECTION */
+.hero-img {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto;
+  box-shadow: 0 0 20px rgba(123, 31, 162, 0.6);
+}
+
+.hero-name {
+  font-size: 2.5rem;
+  margin-top: 30px;
+  background: linear-gradient(to right, #5b8dfd, #d16ba5);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.hero-role {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #d16ba5;
+}
+
+/* TECHNOLOGIES */
+.tech-icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.tech-icons img {
+  width: 60px;
+  transition: transform 0.3s ease;
+}
+
+.tech-icons img:hover {
+  transform: scale(1.2);
+}
+
+/* PROJECTS */
+.project-card {
+  background: #111;
+  border-radius: 15px;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 500px;
+  box-shadow: 0 0 20px rgba(91, 141, 253, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: scale(1.03);
+}
+
+/* CONTACT */
+.contact-btn {
+  background: #000;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 1rem;
+  color: white;
+  margin-top: 30px;
+  box-shadow: 0 0 10px #5b8dfd;
+  transition: all 0.3s ease;
+}
+
+.contact-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #5b8dfd;
+}
+
+/* Footer */
+footer {
+  background: #000;
+  padding: 30px;
+  color: #777;
+  text-align: center;
+}
+
+/* ===================== */
+/* ✅ Responsive Design  */
+/* ===================== */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    padding: 15px 20px;
+    gap: 15px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  section h2 {
+    font-size: 2rem;
+  }
+
+  section p {
+    font-size: 1rem;
+    padding: 0 10px;
+  }
+
+  .hero-name {
+    font-size: 2rem;
+  }
+
+  .hero-role {
+    font-size: 1.2rem;
+  }
+
+  .tech-icons {
+    gap: 20px;
+  }
+
+  .tech-icons img {
+    width: 45px;
+  }
+
+  .contact-btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  nav h1 {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .hero-img {
+    width: 160px;
+    height: 160px;
+  }
+
+  .project-card {
+    padding: 15px;
+    margin: 15px auto;
+    width: 90%;
+  }
+
+  section {
+    padding: 60px 15px;
+  }
+
+  section h2 {
+    font-size: 1.6rem;
+  }
+}

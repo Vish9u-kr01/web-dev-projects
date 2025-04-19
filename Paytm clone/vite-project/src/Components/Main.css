@@ -1,0 +1,20 @@
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0;
+    background-color: #f9f9f9;
+  }
+  
+  .poster {
+    position: relative;
+    width: 80%;
+    max-width: 1000px;
+  }
+  
+  .poster img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
