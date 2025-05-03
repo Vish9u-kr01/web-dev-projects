@@ -1,5 +1,11 @@
 import React, { useState } from "react";
 import "./index.css"; 
+import ButtonCV from "./components/button";
+import Card1 from "./components/Card1";
+import Card2 from "./components/Card2";
+import Card3 from "./components/Card3";
+import Card4 from "./components/Card4";
+import { useTypewriter, Cursor } from "react-simple-typewriter";
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa6";
 import { TbBrandLeetcode } from "react-icons/tb";
@@ -16,8 +22,20 @@ import JS from './assets/js.png';
 import MYSQL from './assets/mysql.png';
 import ORACLE from './assets/oracle.png';
 import REACT from './assets/react.png';
+import GMAIL from './assets/gmail.png';
+import INSTA from './assets/insta.png';
+import LINK from './assets/link.png';
+import NPM from './assets/npm.png';
+import VITE from './assets/vite.png';
+import VSCODE from './assets/vscode.png';
+import WINDOWS from './assets/windows.png';
+
 
 const App = () => {
+  const [text] = useTypewriter({
+    words: ["Student", "Front-End Developer","UI/UX Designer","Web developer","Video-Editor"],
+    loop: {},
+  });
   return (
     <>
       {/* Navbar */}
@@ -40,7 +58,8 @@ const App = () => {
       <section id="hero">
         <img src={propic} alt="Profile" className="hero-img" />
         <h2 className="hero-name ">Hi, I'm Vishnu Kumar</h2>
-        <p className="hero-role text-gradient">Frontend Web Developer</p>
+        <p className="hero-role text-gradient">  {text}
+        <Cursor cursorStyle="|" cursorColor="white" /></p>
       </section>
 
       {/* About */}
@@ -50,12 +69,16 @@ const App = () => {
           Vishnu Kumar, a second-year Computer Science student from BPIT, Delhi,
           passionate about frontend web development and building impactful projects.
         </p>
+        <div className="relative" data-aos="fade-up" data-aos-duration="800">
+							<ButtonCV />
+						</div>
       </section>
 
       {/* Skills */}
       <section id="skills">
         <h2>Skills</h2>
         <div className="tech-icons">
+        <div className="icon-track">
           <img src={HTML} alt="HTML" />
           <img src={CSS} alt="CSS" />
           <img src={JS} alt="JavaScript" />
@@ -68,6 +91,14 @@ const App = () => {
           <img src={GIT} alt="git" />
           <img src={NODE} alt="node" />
           <img src={NEXT} alt="next" />
+          <img src={GMAIL} alt="gmail" />
+          <img src={INSTA} alt="instagram" />
+          <img src={LINK} alt="linkdin" />
+          <img src={NPM} alt="npm" />
+          <img src={VITE} alt="vite" />
+          <img src={VSCODE} alt="vscode" />
+          <img src={WINDOWS} alt="windows" />
+        </div>
         </div>
       </section>
 
@@ -76,23 +107,19 @@ const App = () => {
         <h2>Projects</h2>
 
         <div className="project-card">
-          <h3 className="text-gradient">To-Do List</h3>
-          <p className="text-gradient">Built with React and TailwindCSS, featuring LocalStorage persistence.</p>
+        <Card1/>   
         </div>
 
         <div className="project-card">
-          <h3 className="text-gradient">Weather App</h3>
-          <p className="text-gradient">HTML, CSS, JavaScript with live weather API integration.</p>
+        <Card2/>  
         </div>
 
         <div className="project-card">
-          <h3 className="text-gradient">Tic Tac Toe</h3>
-          <p className="text-gradient">A fun and interactive game using HTML, CSS, JavaScript.</p>
+        <Card3/>  
         </div>
-
+ 
         <div className="project-card">
-          <h3 className="text-gradient">Signup Form</h3>
-          <p className="text-gradient">Form validation with React, styled using modern CSS techniques.</p>
+        <Card4/>  
         </div>
       </section>
 
@@ -107,9 +134,11 @@ const App = () => {
       </section>
 
       {/* Footer */}
+      <div className="container">
       <footer>
         <p>© 2025 Copyright. All rights reserved.</p>
       </footer>
+      </div>
     </>
   );
 };

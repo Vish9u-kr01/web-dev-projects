@@ -17,6 +17,9 @@ body {
 
 /* NAVBAR */
 nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -25,6 +28,14 @@ nav {
   border-bottom: 1px solid #222;
   flex-wrap: wrap;
 }
+
+/* Disable sticky on small screens */
+@media (max-width: 768px) {
+  nav {
+    position: static;
+  }
+}
+
 
 nav h1 {
   font-size: 28px;
@@ -107,6 +118,11 @@ section p {
   object-fit: cover;
   margin: 0 auto;
   box-shadow: 0 0 20px rgba(123, 31, 162, 0.6);
+  transition: transform 0.3s ease;
+}
+.hero-img:hover{
+  transform: scale(1.1);
+  box-shadow: 0 0 40px  #5b8dfd;
 }
 
 .hero-name {
@@ -125,29 +141,36 @@ section p {
 
 /* TECHNOLOGIES */
 .tech-icons {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 40px;
-  margin-top: 40px;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
-.tech-icons img {
+.icon-track {
+  display: inline-block;
+  animation: moveLeft 20s linear infinite;
+}
+
+.icon-track img {
   width: 60px;
+  margin: 0 20px;
   transition: transform 0.3s ease;
 }
 
-.tech-icons img:hover {
+.icon-track img:hover {
   transform: scale(1.2);
+}
+
+@keyframes moveLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }
 
 /* PROJECTS */
 .project-card {
-  background: #111;
-  border-radius: 15px;
-  padding: 20px;
-  margin: 20px auto;
-  max-width: 500px;
   box-shadow: 0 0 20px rgba(91, 141, 253, 0.2);
   transition: transform 0.3s ease;
 }
@@ -177,11 +200,29 @@ section p {
 
 /* Footer */
 footer {
-  background: #000;
+  /* background: #000; */
   padding: 30px;
-  color: #777;
+  color: #ffffffc1;
   text-align: center;
 }
+
+/* From Uiverse.io by stephakayyy */ 
+/* From Uiverse.io by mobinkakei */ 
+.container {
+  width: 100%;
+  height: 100%;
+  /* Add your background pattern here */
+  --s: 25px; /* control the size */
+  --c1: #1eaaee;
+  --c2: #171717;
+
+  --c: #0000 71%, var(--c1) 0 79%, #0000 0;
+  --_s: calc(var(--s) / 2) / calc(2 * var(--s)) calc(2 * var(--s));
+  background: linear-gradient(45deg, var(--c)) calc(var(--s) / -2) var(--_s),
+    linear-gradient(135deg, var(--c)) calc(var(--s) / 2) var(--_s),
+    radial-gradient(var(--c1) 35%, var(--c2) 37%) 0 0 / var(--s) var(--s);
+}
+
 
 /* ===================== */
 /* ✅ Responsive Design  */
@@ -241,12 +282,7 @@ footer {
     height: 160px;
   }
 
-  .project-card {
-    padding: 15px;
-    margin: 15px auto;
-    width: 90%;
-  }
-
+  
   section {
     padding: 60px 15px;
   }

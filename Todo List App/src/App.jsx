@@ -4,7 +4,7 @@ import { FaEdit } from "react-icons/fa";
 import { AiFillDelete } from "react-icons/ai";
 import { v4 as uuidv4 } from 'uuid';
 
-function App() {
+function App() { 
 
   const [todo, setTodo] = useState("")
   const [todos, setTodos] = useState([])
@@ -14,7 +14,7 @@ function App() {
     let todoString = localStorage.getItem("todos")
     if (todoString) {
       let todos = JSON.parse(localStorage.getItem("todos"))
-      setTodos(todos)
+      setTodos(todos) 
     }
   }, [])
 
