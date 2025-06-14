@@ -10,7 +10,7 @@ const Card = () => {
         Form validation with React, styled using modern CSS techniques.
         </p>
       </div>
-      <a href="https://stirring-churros-e018dd.netlify.app/">
+      <a href="https://symphonious-peony-b72779.netlify.app/">
       <button className="card-button">  
         <p>Visit</p>     
         <svg

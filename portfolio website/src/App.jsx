@@ -53,8 +53,7 @@ const App = () => {
           <a href="https://leetcode.com/vishnukr123/" target="_blank" rel="noreferrer"><TbBrandLeetcode /></a>
         </div>
       </nav>
-
-      {/* Hero */}
+    {/* Hero */}
       <section id="hero">
         <img src={propic} alt="Profile" className="hero-img" />
         <h2 className="hero-name ">Hi, I'm Vishnu Kumar</h2>
@@ -73,6 +72,7 @@ const App = () => {
 							<ButtonCV />
 						</div>
       </section>
+
 
       {/* Skills */}
       <section id="skills">
