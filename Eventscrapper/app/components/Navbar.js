@@ -39,6 +39,19 @@ const Navbar = () => {
               </button>
             </Link>
           </li>
+             <li>
+            <Link href="/signup">
+              <button
+                className="border border-slate-500 px-2 py-1 sm:px-3 sm:py-2 rounded-xl text-white text-xs sm:text-sm bg-transparent 
+                hover:bg-white hover:text-black 
+                active:bg-white active:text-black 
+                focus:bg-white focus:text-black 
+                transition-all duration-300"
+              >
+               SignUp
+              </button>
+            </Link>
+          </li>
         </ul>
       </div>
     </div>

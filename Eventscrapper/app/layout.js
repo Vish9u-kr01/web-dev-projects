@@ -1,5 +1,5 @@
 export const metadata = {
-  title: 'EventScrapper App',
+  title: 'EventScrapper',
   description: 'A sample layout with navbar and footer',
 };
 
