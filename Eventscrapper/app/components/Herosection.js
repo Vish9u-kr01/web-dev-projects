@@ -16,7 +16,7 @@ const HeroSection = () => {
       </div>
       <div className="w-full max-w-4xl px-2">
         <Image
-          src="/Eimg.jpg"
+          src="/Elmg.jpg"
           alt="Hero Image"
           width={1000}
           height={150} // doubled from 500 to 1000
