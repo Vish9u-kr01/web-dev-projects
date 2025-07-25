@@ -5,6 +5,8 @@ import Card1 from "./components/Card1";
 import Card2 from "./components/Card2";
 import Card3 from "./components/Card3";
 import Card4 from "./components/Card4";
+import Card5 from "./components/card5";
+import Card6 from "./components/card6";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa6";
@@ -121,6 +123,15 @@ const App = () => {
         <div className="project-card">
         <Card4/>  
         </div>
+
+        <div>
+          <Card5/>
+        </div>
+
+         <div>
+          <Card6/>
+        </div>
+        
       </section>
 
       {/* Contact */}
