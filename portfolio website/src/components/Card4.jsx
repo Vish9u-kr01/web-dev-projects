@@ -1,16 +1,16 @@
-import './Card4.css';
+import './Card1.css';
 
 const Card = () => {
   return (
     <div className="card-wrapper">
     <div className="card ">
       <div>
-        <h1 className="card-heading text-gradient">Signup Form</h1>
+        <h1 className="card-heading text-gradient">Event Scrapper</h1>
         <p className="card-text text-gradient">
-        Form validation with React, styled using modern CSS techniques.
+      A real-time event listing platform that automatically scrapes event data from any City,User can explore and buy tickets.
         </p>
       </div>
-      <a href="https://symphonious-peony-b72779.netlify.app/">
+      <a href="https://eventscrapper.vercel.app/">
       <button className="card-button">  
         <p>Visit</p>     
         <svg
