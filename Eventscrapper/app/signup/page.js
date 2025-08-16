@@ -112,6 +112,9 @@ const SignupForm = () => {
       {/* Embedded CSS */}
       <style jsx>{`
         .signup-form {
+          margin-top:150px;
+           margin-left: auto;
+          margin-right: auto;
           width: 300px;
           margin: 0 auto;
           padding: 20px;
